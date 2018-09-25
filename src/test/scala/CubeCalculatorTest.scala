@@ -1,5 +1,5 @@
 import org.scalatest.FunSuite
-import example.CubeCalculator
+import dmp.CubeCalculator
 
 class CubeCalculatorTest extends FunSuite{
   test("CubeCalculator.cube"){

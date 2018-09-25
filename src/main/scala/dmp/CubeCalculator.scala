@@ -1,4 +1,4 @@
-package example
+package dmp
 
 object CubeCalculator extends App{
   def cube(x: Int) = {
