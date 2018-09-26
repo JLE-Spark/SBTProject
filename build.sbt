@@ -21,9 +21,21 @@ libraryDependencies += "com.typesafe" % "config" % "1.3.2"
 libraryDependencies += jdbc
 
 //spark
+dependencyOverrides += "com.fasterxml.jackson.core" % "jackson-core" % "2.8.11"
+dependencyOverrides += "com.fasterxml.jackson.core" % "jackson-databind" % "2.8.11"
+dependencyOverrides += "com.fasterxml.jackson.core" % "jackson-annotations" % "2.8.11"
+dependencyOverrides += "com.fasterxml.jackson.module" % "jackson-module-paranamer" % "2.8.11"
+dependencyOverrides += "com.fasterxml.jackson.module" % "jackson-module-scala_2.11" % "2.8.11"
+dependencyOverrides += "com.fasterxml.jackson.datatype" % "jackson-datatype-jsr310" % "2.8.11"
+dependencyOverrides += "com.google.guava" % "guava" % "23.0"
+dependencyOverrides += "com.google.code.findbugs" % "jsr305" % "3.0.2"
+dependencyOverrides += "com.google.code.gson" % "gson" % "2.8.0"
+dependencyOverrides += "com.google.inject" % "guice" % "4.1.0"
+
 libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.2.0"
 libraryDependencies += "org.apache.spark" %% "spark-core" % "2.2.0"
 libraryDependencies += "datastax" % "spark-cassandra-connector" % "2.0.9-s_2.11"
+
 
 assemblyMergeStrategy in assembly := {
   case PathList("org","aopalliance", xs @ _*) => MergeStrategy.last
